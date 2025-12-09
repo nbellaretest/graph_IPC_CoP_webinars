@@ -1,377 +1,194 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IPC Community of Practice — Donor Brief</title>
-  <style>
-    :root{
-      --bg1: linear-gradient(135deg,#0f172a 0%, #0b2545 50%, #06334a 100%);
-      --card: rgba(255,255,255,0.06);
-      --glass: rgba(255,255,255,0.04);
-      --accent1: #6ee7b7;
-      --accent2: #7dd3fc;
-      --muted: rgba(255,255,255,0.75);
-      --glass-border: rgba(255,255,255,0.06);
-      --radius: 14px;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    html,body{height:100%;margin:0;background:var(--bg1);color:#e6eef8;}
-    .container{max-width:1100px;margin:36px auto;padding:28px;}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid var(--glass-border);border-radius:var(--radius);padding:22px;margin-bottom:22px;backdrop-filter: blur(6px);} 
-    header.hero{display:flex;gap:20px;align-items:center;padding:28px;border-radius:18px;background:linear-gradient(90deg, rgba(125,211,252,0.06), rgba(110,231,183,0.04));border:1px solid rgba(255,255,255,0.04);}
-    .brand{flex:1}
-    .brand h1{margin:0;font-size:22px;letter-spacing:0.4px}
-    .brand p{margin:6px 0 0;color:var(--muted)}
-    .cta{display:flex;gap:10px}
-    .btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:10px 14px;border-radius:10px;color:#052432;font-weight:600;text-decoration:none}
-
-    nav{display:flex;gap:10px;flex-wrap:wrap}
-    nav a{color:var(--muted);text-decoration:none;font-size:14px}
-
-    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr;}}
-
-    h2.section{margin:0 0 12px;font-size:18px}
-    p.lead{color:var(--muted);margin-top:0}
-
-    /* Webinar table */
-    table{width:100%;border-collapse:collapse}
-    th,td{padding:10px 8px;text-align:left;border-bottom:1px dashed rgba(255,255,255,0.03);font-size:14px}
-    th{color:var(--muted);font-weight:600}
-
-    /* Stats */
-    .stats{display:flex;gap:12px;align-items:center}
-    .stat{flex:1;background:var(--card);padding:16px;border-radius:12px;text-align:center}
-    .stat .num{font-size:28px;font-weight:700}
-    .stat .label{color:var(--muted);font-size:13px;margin-top:6px}
-
-    /* Simple svg charts */
-    .chart-wrap{display:flex;gap:16px;align-items:center}
-    .donut{width:140px;height:140px}
-
-    /* Agenda sample */
-    .agenda{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px}
-    .agenda-row{display:flex;justify-content:space-between;padding:8px 6px}
-    .agenda-row:nth-child(odd){background:rgba(255,255,255,0.01);border-radius:8px}
-
-    footer{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;padding-top:8px}
-
-    /* small micro visuals */
-    .spark{height:40px;background:linear-gradient(90deg,var(--accent2),var(--accent1));border-radius:8px}
-
-    /* animated counter */
-    .counter {display:inline-block}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>IPC Community of Practice — Donor One‑Pager</title>
+<style>
+  :root{
+    --bg1: linear-gradient(135deg,#0f172a 0%, #0b1220 60%);
+    --card: linear-gradient(135deg,#0ea5e9 0%, #7c3aed 100%);
+    --muted: #94a3b8;
+    --glass: rgba(255,255,255,0.06);
+    --glass-2: rgba(255,255,255,0.03);
+    --accent: #60a5fa;
+    font-family: Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  }
+  html,body{height:100%;margin:0;background:var(--bg1);color:#e6eef8}
+  .wrapper{max-width:1100px;margin:40px auto;padding:32px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+  header{display:flex;align-items:center;gap:20px}
+  .logo{width:86px;height:86px;border-radius:12px;background:var(--card);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;box-shadow:0 6px 18px rgba(124,58,237,0.25)}
+  h1{margin:0;font-size:20px}
+  p.lead{margin:6px 0 0;color:var(--muted)}
+  .grid{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:22px}
+  .card{background:var(--glass);padding:20px;border-radius:12px}
+  .section-title{display:flex;justify-content:space-between;align-items:center}
+  .kpi{display:flex;gap:12px;align-items:center}
+  .big-num{font-size:28px;font-weight:700}
+  .small{color:var(--muted);font-size:13px}
+  /* Past webinars table */
+  table{width:100%;border-collapse:collapse;margin-top:12px}
+  th,td{padding:10px 8px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.03)}
+  th{font-weight:600;color:#dbeafe}
+  td.topic{font-weight:600}
+  /* visuals */
+  .stats{display:flex;gap:12px;margin-top:12px}
+  .stat-card{flex:1;padding:14px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));text-align:center}
+  .stat-card h3{margin:0;font-size:22px}
+  .stat-card p{margin:6px 0 0;color:var(--muted)}
+  /* simple bar chart for countries */
+  .bars{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+  .bar{display:flex;align-items:center;gap:12px}
+  .bar .label{width:110px;font-size:13px;color:var(--muted)}
+  .bar .track{flex:1;height:12px;background:var(--glass-2);border-radius:8px;position:relative}
+  .bar .fill{height:100%;border-radius:8px;background:linear-gradient(90deg,#7c3aed,#0ea5e9)}
+  .agenda{margin-top:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:8px}
+  footer{margin-top:20px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+  /* responsive */
+  @media(max-width:880px){.grid{grid-template-columns:1fr;}.logo{width:64px;height:64px}.wrapper{margin:20px;padding:18px}}
+</style>
 </head>
 <body>
-  <div class="container">
-    <header class="hero card">
-      <div class="brand">
-        <h1>IPC Community of Practice — Donor Brief</h1>
-        <p class="lead">Sharing knowledge, amplifying learning: global webinars and peer-led implementation experiences for IPC strengthening.</p>
-        <nav>
-          <a href="#about">About</a> · <a href="#webinars">Past Webinars</a> · <a href="#stats">Impact</a> · <a href="#agenda">Sample Agenda</a>
-        </nav>
-      </div>
-      <div class="cta">
-        <a class="btn" href="#stats">View impact</a>
-        <a class="btn" href="#webinars" style="opacity:0.95">See webinars</a>
+  <div class="wrapper">
+    <header>
+      <div class="logo">IPC</div>
+      <div>
+        <h1>Infection Prevention & Control — Global Community of Practice</h1>
+        <p class="lead">One‑page donor overview highlighting webinars, reach and sample agenda.</p>
       </div>
     </header>
 
-    <main class="grid">
-      <section>
-        <div id="about" class="card">
-          <h2 class="section">About the IPC Community of Practice & Webinars</h2>
-          <p class="lead">The IPC CoP launched in March 2022 to strengthen a global network of infection prevention and control practitioners by providing interactive 90-minute webinars, country experience sharing, polls and panel discussions. Sessions are hosted in partnership with WHO and regional offices and materials are shared on the online platform. The CoP focuses on practical implementation, policy uptake and sustaining IPC achievements.</p>
-          <p class="lead">Target audience includes national, sub-national and facility-level IPC programme staff. The CoP platform supports peer exchange and encourages capacity building through learning sessions and open discussion.</p>
-        </div>
-
-        <div id="webinars" class="card">
-  <h2 class="section">Past Webinar Schedule (Enhanced Timeline)</h2>
-
-  <style>
-    .timeline{display:flex;flex-direction:column;gap:22px;padding-left:10px;position:relative}
-    .timeline:before{content:"";position:absolute;left:6px;top:0;bottom:0;width:2px;background:linear-gradient(var(--accent2),var(--accent1));opacity:0.4}
-    .tl-item{display:flex;gap:16px;align-items:flex-start;opacity:0;transform:translateY(12px);animation:fadeUp 0.7s forwards}
-    .tl-item:nth-child(1){animation-delay:0.1s}
-    .tl-item:nth-child(2){animation-delay:0.2s}
-    .tl-item:nth-child(3){animation-delay:0.3s}
-    .tl-item:nth-child(4){animation-delay:0.4s}
-    .tl-item:nth-child(5){animation-delay:0.5s}
-    .tl-item:nth-child(6){animation-delay:0.6s}
-    @keyframes fadeUp{to{opacity:1;transform:translateY(0px)}}
-    .tl-dot{width:16px;height:16px;border-radius:50%;background:linear-gradient(90deg,var(--accent2),var(--accent1));border:2px solid rgba(255,255,255,0.3);margin-top:4px;flex-shrink:0}
-    .tl-card{padding:14px 18px;border-radius:14px;background:var(--card);border:1px solid var(--glass-border);flex:1;box-shadow:0 4px 8px rgba(0,0,0,0.15)}
-    .tl-date{font-size:13px;color:var(--muted);margin-bottom:4px}
-    .tl-topic{font-size:15px;font-weight:600;margin-bottom:6px}
-    .tl-badge{display:inline-block;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:600;background:rgba(125,211,252,0.15);color:#7dd3fc;margin-top:4px}
-  </style>
-
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-date">8 March 2022</div>
-        <div class="tl-topic">Inaugural launch: Introduction to the Global IPC CoP platform</div>
-        <span class="tl-badge">Global</span>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-date">29 March 2022</div>
-        <div class="tl-topic">Health worker infection prevention in the context of COVID-19</div>
-        <span class="tl-badge">Global</span>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-date">31 May 2022</div>
-        <div class="tl-topic">Learning from data: WHA Resolution on IPC</div>
-        <span class="tl-badge">Global</span>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-date">12 July 2022</div>
-        <div class="tl-topic">Implementation of IPC Programmes: Lessons from the field</div>
-        <span class="tl-badge" style="background:rgba(110,231,183,0.15);color:#6ee7b7">AFRO</span>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-date">23 Aug 2022</div>
-        <div class="tl-topic">Implementation of IPC Programmes — Part II</div>
-        <span class="tl-badge" style="background:rgba(110,231,183,0.15);color:#6ee7b7">EMRO</span>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot"></div>
-      <div class="tl-card">
-        <div class="tl-date">25 Oct 2022</div>
-        <div class="tl-topic">Turning COVID‑19 into a learning opportunity</div>
-        <span class="tl-badge">Global</span>
-      </div>
-    </div>
-  </div>
-</div>
-              <div class="tl-card">
-                <div class="tl-date">8 March 2022</div>
-                <div class="tl-topic">Inaugural launch: Introduction to the Global IPC CoP platform</div>
-                <div class="tl-region">Global / Launch session</div>
-              </div>
+    <div class="grid">
+      <main>
+        <section class="card">
+          <div class="section-title"><h2 style="margin:0;font-size:16px">About the IPC Community of Practice & Webinars</h2></div>
+          <p style="margin-top:12px;color:var(--muted);line-height:1.5">The IPC Community of Practice (CoP) strengthens the global IPC network through regular 90‑minute interactive webinars and an online platform where members share learning, country experiences, and policy implications. Sessions are led by WHO HQ and regional partners and include country presentations, panel discussions, polls and Q&A. Presented materials are shared on the CoP platform.</p>
+          <div style="margin-top:14px;display:flex;gap:10px">
+            <div style="flex:1;padding:10px;border-radius:10px;background:linear-gradient(90deg,rgba(96,165,250,0.06),rgba(124,58,237,0.04));">
+              <div class="small">Registered members</div>
+              <div class="big-num">269</div>
+              <div class="small">Members across 51 countries</div>
             </div>
-
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-card">
-                <div class="tl-date">29 March 2022</div>
-                <div class="tl-topic">Prevention, identification and management of health worker infection (COVID‑19)</div>
-                <div class="tl-region">Global</div>
-              </div>
-            </div>
-
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-card">
-                <div class="tl-date">31 May 2022</div>
-                <div class="tl-topic">Learning from the data: WHA Resolution on IPC</div>
-                <div class="tl-region">Global</div>
-              </div>
-            </div>
-
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-card">
-                <div class="tl-date">12 July 2022</div>
-                <div class="tl-topic">Implementation of IPC Programmes: Lessons from the field</div>
-                <div class="tl-region">AFRO (country experiences)</div>
-              </div>
-            </div>
-
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-card">
-                <div class="tl-date">23 Aug 2022</div>
-                <div class="tl-topic">Implementation of IPC Programmes: Lessons from the field — Part II</div>
-                <div class="tl-region">EMRO</div>
-              </div>
-            </div>
-
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-card">
-                <div class="tl-date">25 Oct 2022</div>
-                <div class="tl-topic">Turning COVID‑19 into a learning opportunity: sustaining IPC achievements</div>
-                <div class="tl-region">Global — multi‑language interpretation</div>
-              </div>
+            <div style="flex:1;padding:10px;border-radius:10px;background:linear-gradient(90deg,rgba(96,165,250,0.03),rgba(124,58,237,0.02));">
+              <div class="small">Unique webinar attendees (2022)</div>
+              <div class="big-num">243</div>
+              <div class="small">Across the first four live sessions</div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div id="agenda" class="card">
-  <h2 class="section">Example webinar agenda (Card-style layout)</h2>
-
-  <a href="#" class="btn" style="display:inline-block;margin-top:6px;margin-bottom:14px;padding:8px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#052432;font-weight:600;text-decoration:none">Download Full Agenda (PDF)</a>
-
-  <h2 class="section"> (Card‑style layout)</h2>
-
-  <style>
-    .agenda-cardlist{display:flex;flex-direction:column;gap:14px;margin-top:10px}
-    .ag-card{background:var(--card);border:1px solid var(--glass-border);border-radius:14px;padding:14px 18px;box-shadow:0 4px 8px rgba(0,0,0,0.12);display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:start}
-    .ag-time{text-align:right;font-weight:700;color:var(--muted);padding-top:3px}
-    .ag-topic{font-size:15px;line-height:1.42}
-  </style>
-
-  <div class="agenda-cardlist">
-    <div class="ag-card"><div class="ag-time">14:00 – 14:05</div><div class="ag-topic">Housekeeping — ECHO Institute</div></div>
-    <div class="ag-card"><div class="ag-time">14:05 – 14:10</div><div class="ag-topic">Welcome remarks / Introduction — Anthony Twyman (WHO/HQ)</div></div>
-    <div class="ag-card"><div class="ag-time">14:10 – 14:30</div><div class="ag-topic">Maintaining IPC measures for COVID‑19 — Joao Toledo (HQ)</div></div>
-    <div class="ag-card"><div class="ag-time">14:25 – 14:45</div><div class="ag-topic">Impact of COVID‑19 on hospital‑acquired bacteraemia — Nina Zhu (Imperial College)</div></div>
-    <div class="ag-card"><div class="ag-time">14:45 – 14:55</div><div class="ag-topic">Policy uptake — panel &amp; poll</div></div>
-    <div class="ag-card"><div class="ag-time">14:55 – 15:10</div><div class="ag-topic">Reflections on learning from COVID‑19 — Mirfin Mpundu (ReAct Africa)</div></div>
-    <div class="ag-card"><div class="ag-time">15:10 – 15:20</div><div class="ag-topic">Discussion — All</div></div>
-    <div class="ag-card"><div class="ag-time">15:20 – 15:25</div><div class="ag-topic">Updates on the survey — WHO/HQ &amp; Imperial College</div></div>
-    <div class="ag-card"><div class="ag-time">15:25 – 15:30</div><div class="ag-topic">Closing remarks / next steps — WHO/HQ</div></div>
-  </div>
-
-  <p class="lead" style="margin-top:14px">This card-style agenda uses separated blocks for each agenda item, improving readability and giving donors a polished, structured impression of how webinars are run.</p>
-</div><div class="ag-topic">Housekeeping — ECHO Institute</div></div>
-            <div class="ag-row"><div class="ag-time">14:05 – 14:10</div><div class="ag-topic">Welcome remarks / Introduction — Anthony Twyman (WHO/HQ)</div></div>
-            <div class="ag-row"><div class="ag-time">14:10 – 14:30</div><div class="ag-topic">Maintaining IPC measures for COVID‑19 in health care facilities — Joao Toledo (HQ)</div></div>
-            <div class="ag-row"><div class="ag-time">14:25 – 14:45</div><div class="ag-topic">Impact of COVID‑19 on hospital‑acquired bacteraemia — Nina Zhu (Imperial College)</div></div>
-            <div class="ag-row"><div class="ag-time">14:45 – 14:55</div><div class="ag-topic">Policy uptake — panel &amp; poll</div></div>
-            <div class="ag-row"><div class="ag-time">14:55 – 15:10</div><div class="ag-topic">Reflections on learning from COVID‑19 — Mirfin Mpundu (ReAct Africa)</div></div>
-            <div class="ag-row"><div class="ag-time">15:10 – 15:20</div><div class="ag-topic">Discussion — All</div></div>
-            <div class="ag-row"><div class="ag-time">15:20 – 15:25</div><div class="ag-topic">Updates on the survey — WHO/HQ &amp; Imperial College</div></div>
-            <div class="ag-row"><div class="ag-time">15:25 – 15:30</div><div class="ag-topic">Closing remarks / next steps — WHO/HQ</div></div>
+        <section class="card" style="margin-top:18px">
+          <div class="section-title">
+            <h2 style="margin:0;font-size:16px">Past Webinar Schedule</h2>
+            <div class="small">Interactive 90‑minute sessions</div>
           </div>
 
-          <p class="lead" style="margin-top:12px">This revised agenda layout keeps timing aligned to the right and prevents topic text from overlapping the center, creating a clearer and more professional appearance.</p>
-        </div>
-            <div class="agenda-row"><span>14:00 – 14:05</span><span>Housekeeping — ECHO Institute</span></div>
-            <div class="agenda-row"><span>14:05 – 14:10</span><span>Welcome remarks / Introduction — Anthony Twyman (WHO/HQ)</span></div>
-            <div class="agenda-row"><span>14:10 – 14:30</span><span>Maintaining IPC measures for COVID‑19 in health care facilities — Joao Toledo (HQ)</span></div>
-            <div class="agenda-row"><span>14:25 – 14:45</span><span>Impact of COVID‑19 on hospital‑acquired bacteraemia — Nina Zhu (Imperial College)</span></div>
-            <div class="agenda-row"><span>14:45 – 14:55</span><span>Policy uptake — panel &amp; poll</span></div>
-            <div class="agenda-row"><span>14:55 – 15:10</span><span>Reflections on learning from COVID‑19 — Mirfin Mpundu (ReAct Africa)</span></div>
-            <div class="agenda-row"><span>15:10 – 15:20</span><span>Discussion — All</span></div>
-            <div class="agenda-row"><span>15:20 – 15:25</span><span>Updates on the survey — WHO/HQ &amp; Imperial College</span></div>
-            <div class="agenda-row"><span>15:25 – 15:30</span><span>Closing remarks / next steps — WHO/HQ</span></div>
+          <table aria-label="Past webinars">
+            <thead>
+              <tr><th>Date</th><th>Topic</th><th>Region / format</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>8 Mar 2022</td><td class="topic">Launch: Introduction to the IPC CoP platform</td><td>Global</td></tr>
+              <tr><td>29 Mar 2022</td><td class="topic">Prevention, identification & management of health worker infection (COVID‑19)</td><td>Global</td></tr>
+              <tr><td>31 May 2022</td><td class="topic">Learning from the data: WHA resolution on IPC</td><td>Global</td></tr>
+              <tr><td>12 Jul 2022</td><td class="topic">Implementation of IPC Programmes: Lessons from the field (AFRO)</td><td>AFRO</td></tr>
+              <tr><td>23 Aug 2022</td><td class="topic">Implementation of IPC Programmes: Lessons from the field — Part II (EMRO)</td><td>EMRO</td></tr>
+              <tr><td>25 Oct 2022</td><td class="topic">Turning COVID‑19 into a learning opportunity: sustaining IPC achievements</td><td>Global</td></tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Notes: sessions are 90 minutes, include country experiences, live polling and panel discussion. Certificates of participation are issued post‑session.</div>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <div class="section-title"><h2 style="margin:0;font-size:16px">Attendees & Reach</h2><div class="small">Snapshot for donor review</div></div>
+          <div class="stats">
+            <div class="stat-card">
+              <h3>269</h3>
+              <p class="small">Registered CoP members</p>
+            </div>
+            <div class="stat-card">
+              <h3>243</h3>
+              <p class="small">Unique webinar attendees (first 4 sessions)</p>
+            </div>
+            <div class="stat-card">
+              <h3>51</h3>
+              <p class="small">Countries represented</p>
+            </div>
           </div>
-          <p class="lead" style="margin-top:12px">This sample agenda demonstrates the flow of a typical 90‑minute session — brief plenary, country experiences, poll / policy discussion and a closing with next‑step resources and certificate information.</p>
-        </div>
-      </section>
+
+          <div style="margin-top:14px">
+            <div class="small">Top participating countries (member counts)</div>
+            <div class="bars" aria-hidden>
+              <div class="bar"><div class="label">Oman</div><div class="track"><div class="fill" style="width:72%"></div></div><div style="width:36px;text-align:right">49</div></div>
+              <div class="bar"><div class="label">Ghana</div><div class="track"><div class="fill" style="width:45%"></div></div><div style="width:36px;text-align:right">31</div></div>
+              <div class="bar"><div class="label">United Kingdom</div><div class="track"><div class="fill" style="width:28%"></div></div><div style="width:36px;text-align:right">19</div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <div class="section-title"><h2 style="margin:0;font-size:16px">Example Webinar Agenda (for donors)</h2><div class="small">Sample from 25 Oct 2022 session</div></div>
+          <div class="agenda">
+            <strong>Title:</strong> Turning COVID‑19 into a learning opportunity: sustaining IPC achievements<br>
+            <strong>Date & Time:</strong> 25 Oct 2022 — 14:00–15:30 CET<br>
+            <hr style="border:none;border-top:1px dashed rgba(255,255,255,0.04);margin:8px 0">
+            <ol style="margin:6px 0 0 18px;color:var(--muted)">
+              <li>Housekeeping (ECHO Institute) — 2:00–2:05</li>
+              <li>Welcome & speaker intros — 2:05–2:10</li>
+              <li>Maintaining IPC measures for COVID‑19 in healthcare facilities (presentation) — 2:10–2:30</li>
+              <li>Understanding impact on hospital‑acquired bacteraemia (presentation) — 2:25–2:45</li>
+              <li>Policy uptake & poll — 2:45–2:55</li>
+              <li>Reflections on learning from COVID‑19 — 2:55–3:10</li>
+              <li>Discussion & Q&A — 3:10–3:20</li>
+              <li>Survey updates & closing — 3:20–3:30</li>
+            </ol>
+          </div>
+        </section>
+
+      </main>
 
       <aside>
-        <div id="stats" class="card">
-          <h2 class="section">Impact &amp; Participation</h2>
-          <div class="stats">
-            <div class="stat">
-              <div class="num" id="registered">269</div>
-              <div class="label">Registered CoP members</div>
-            </div>
-            <div class="stat">
-              <div class="num" id="unique">243</div>
-              <div class="label">Unique webinar attendees (to date)</div>
-            </div>
-          </div>
+        <div class="card">
+          <div class="section-title"><h3 style="margin:0;font-size:15px">Quick impact highlights</h3></div>
+          <ul style="margin-top:10px;color:var(--muted);line-height:1.6">
+            <li>Four live sessions delivered in first phase (Mar–Jul 2022).</li>
+            <li>90‑minute interactive format with country case studies and panel discussion.</li>
+            <li>All materials shared on the CoP platform; certificates issued post‑session.</li>
+          </ul>
 
           <div style="margin-top:12px">
-            <div class="chart-wrap">
-              <!-- simple donut: unique / registered -->
-              <svg class="donut" viewBox="0 0 42 42" role="img" aria-label="Participation donut">
-                <defs>
-                  <linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#7dd3fc"/><stop offset="1" stop-color="#6ee7b7"/></linearGradient>
-                </defs>
-                <circle cx="21" cy="21" r="15.9" fill="transparent" stroke="rgba(255,255,255,0.06)" stroke-width="7"></circle>
-                <!-- calculate stroke-dasharray in JS -->
-                <circle id="donutActive" cx="21" cy="21" r="15.9" fill="transparent" stroke="url(#g1)" stroke-width="7" stroke-linecap="round" transform="rotate(-90 21 21)" stroke-dasharray="0 100"></circle>
-                <text x="21" y="22.6" text-anchor="middle" font-size="4.2" fill="#e6eef8" font-weight="700">243</text>
-                <text x="21" y="27.6" text-anchor="middle" font-size="2" fill="rgba(230,238,248,0.75)">unique</text>
-              </svg>
-              <!-- simple bar showing growth -->
-              <div style="flex:1">
-                <div style="font-size:13px;color:var(--muted);margin-bottom:8px">Growth in participants (first session → latest)</div>
-                <div style="background:rgba(255,255,255,0.03);padding:8px;border-radius:8px">
-                  <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px"><span>First session</span><strong>64</strong></div>
-                  <div style="height:12px;background:rgba(0,0,0,0.15);border-radius:8px;overflow:hidden;">
-                    <div id="barGrowth" style="width:0%;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--accent2),var(--accent1));transition:width 1.6s ease"></div>
-                  </div>
-                  <div style="display:flex;justify-content:space-between;font-size:13px;margin-top:8px"><span>Latest session</span><strong>243</strong></div>
-                </div>
-                <p style="color:var(--muted);font-size:12px;margin-top:8px">Participants have steadily grown since launch (example: from 64 participants to 243 unique attendees).</p>
-              </div>
-            </div>
+            <div class="small">Donor ask — example uses</div>
+            <ol style="margin:8px 0 0 18px;color:var(--muted)">
+              <li>Scale up webinars to additional regions (EURO) and languages.</li>
+              <li>Support translation & interpretation.</li>
+              <li>Invest in platform engagement and facilitation to increase member activity.</li>
+            </ol>
           </div>
         </div>
 
-        <div class="card">
-          <h2 class="section">Why donors invest</h2>
-          <ul style="color:var(--muted);padding-left:18px">
-            <li>Targeted capacity strengthening for national and facility IPC teams</li>
-            <li>Practical, field-based lessons from countries to inform scale-up</li>
-            <li>Multilingual access and certificates to incentivize participation</li>
-            <li>Low-cost, high-reach knowledge sharing platform with measurable engagement</li>
-          </ul>
+        <div class="card" style="margin-top:14px">
+          <h3 style="margin:0;font-size:15px">Contact</h3>
+          <p class="small" style="margin-top:8px">WHO HQ — IPC Hub<br>ipcglobalcommunity@who.int</p>
+          <div style="margin-top:12px;text-align:center">
+            <a href="#" style="display:inline-block;padding:10px 14px;border-radius:10px;background:var(--card);color:white;text-decoration:none;font-weight:600;box-shadow:0 8px 20px rgba(12,74,110,0.2)">Download full report</a>
+          </div>
         </div>
-
-        <div class="card">
-          <h2 class="section">Quick links</h2>
-          <p class="lead" style="margin:0 0 10px">Resources and next steps:</p>
-          <nav style="display:flex;flex-direction:column;gap:8px">
-            <a href="#" style="color:var(--muted);text-decoration:none">Full donor report (PDF)</a>
-            <a href="#" style="color:var(--muted);text-decoration:none">Platform: ipcglobalcommunity.org</a>
-            <a href="#" style="color:var(--muted);text-decoration:none">Request a tailored donor briefing</a>
-          </nav>
-        </div>
-
       </aside>
-    </main>
+    </div>
 
-    <footer class="card">
-      <div>Prepared by the IPC Community of Practice • data snapshot: 2022</div>
-      <div>Contact: <a href="mailto:ipc-cop@example.org" style="color:var(--muted);text-decoration:none">ipc-cop@example.org</a></div>
+    <footer>
+      <div>Prepared for donors — IPC Community of Practice</div>
+      <div class="small">Data sources: internal CoP report & session agenda</div>
     </footer>
   </div>
 
-  <script>
-    // Simple JS to animate donut and growth bar
-    (function(){
-      var registered = 269;
-      var unique = 243;
-      var first = 64;
-      // donut: percent unique of registered
-      var perc = Math.min(100, Math.round((unique/registered)*100));
-      var dash = perc + ' ' + (100-perc);
-      var donut = document.getElementById('donutActive');
-      if(donut){donut.setAttribute('stroke-dasharray', dash);} 
-      // growth bar: map first -> latest
-      var bar = document.getElementById('barGrowth');
-      var pctGrowth = Math.min(100, Math.round((unique - first) / (registered - first) * 100));
-      setTimeout(function(){ if(bar) bar.style.width = pctGrowth + '%'; }, 200);
-
-      // animate counters (fast incremental)
-      function animateCount(id, to){
-        var el = document.getElementById(id);
-        if(!el) return;
-        var start = 0; var duration = 900; var step = Math.ceil(Math.max(1,to/30));
-        var cur = start; var t0 = Date.now();
-        var iv = setInterval(function(){
-          cur = Math.min(to, cur + step);
-          el.textContent = cur;
-          if(cur>=to) clearInterval(iv);
-        }, 30);
-      }
-      animateCount('registered', registered);
-      animateCount('unique', unique);
-
-    })();
-  </script>
+<script>
+  // small interactive: show tooltip on hover for KPI cards
+  document.querySelectorAll('.stat-card').forEach(card=>{
+    card.addEventListener('mouseenter',()=>card.style.transform='translateY(-6px)');
+    card.addEventListener('mouseleave',()=>card.style.transform='translateY(0)');
+  });
+</script>
 </body>
 </html>
